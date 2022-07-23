@@ -4,6 +4,7 @@
  * Do not modify these two selectors, please
  */
 html {
+  font-family: sans-serif;
   box-sizing: border-box;
 }
 *, *:before, *:after {
@@ -15,6 +16,7 @@ html {
  */
 
 body {
+  font-family: Source Sans Pro;
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
@@ -23,3 +25,4 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
