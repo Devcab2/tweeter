@@ -1,8 +1,27 @@
 nav {
+  display: flex;
   font-family: Bungee;
   color: #FFFFFF;
   height: 120px;
   border-width: 100%;
   background-color: #4056A1;
   padding: 1.5em;
+  justify-content: space-between;
+  align-content: center;
+  
+}
+
+nav .write-new-tweet {
+  display: flex;;
+  font-family: Source Sans Pro;
+}
+
+nav .fa-angle-double-down {
+  color: red;
+}
+
+.right-hand-nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
