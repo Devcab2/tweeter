@@ -1,0 +1,48 @@
+main {
+  display: flex;
+  font-family: Source Sans Pro;
+  background-color: #FFFFFF;
+  height: 200px;
+  border-width: 100%;
+  padding: 1.5em;
+  justify-content: space-between;
+  align-content: center;
+  
+}
+
+label {
+  font-family: Source Sans Pro;
+  color: black;
+  border-bottom: 1px;
+  align-items: center;
+}
+
+button {
+  font-family: Bungee;
+  color: #FFFFFF;
+  background-color:crimson;
+}
+
+div {
+  display: flex;
+  align-content: space-between;
+}
+
+.text {
+  align-items: center;
+  width: 100%;
+  border-bottom: 4px solid;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+  height: 40px;
+}
+
+.new-tweet {
+  width: 100%;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}

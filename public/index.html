@@ -22,6 +22,9 @@
     <!-- header css -->
     <link rel="stylesheet" href="/styles/header.css"/>
 
+    <!-- new-tweet css-->
+    <link rel="stylesheet" href="/styles/new-tweet.css"/>
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -55,7 +58,15 @@
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <p> Hodor. Hodor hodor, hodor. Hodor hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor; hodor hodor hodor. Hodor. Hodor hodor; hodor hodor - hodor, hodor, hodor hodor. Hodor, hodor. Hodor. Hodor, hodor hodor hodor; hodor hodor; hodor hodor hodor! Hodor hodor HODOR! Hodor hodor... Hodor hodor hodor...</p>
+      <section class="new-tweet">
+        <form action="/tweets" method="POST">
+        <textarea class="text" name="text" placeholder="What are you humming about?"id="tweet-text"></textarea>
+          <div class="button-container">
+            <button class="tweet-button" type="submit">Tweet</button>
+            <output class ="counter" name="counter" class="counter" for="tweet-text">140</output>
+          </div>
+        </form>
+      </section>
     </main>
   </body>
 </html>
