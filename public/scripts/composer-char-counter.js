@@ -27,14 +27,22 @@ $(document).ready(function() {
 
   const countCharacters = (e) => {
 
-    console.log(e.target.value);
-
     let numOfEnteredChars = e.target.value.length;
 
     let counter = maxCharacters - numOfEnteredChars;
 
     characterCounter.innerHTML = counter;
 
+    if (counter < 0) {
+
+      document.getElementById("counter").setAttribute("style", "color: red;");
+
+    } else {
+
+      document.getElementById("counter").setAttribute("style", "color: black;");
+
+    }
+  
   };
 
   // add event listener to call method when a char is added or removed

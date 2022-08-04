@@ -1,10 +1,10 @@
 nav {
   display: flex;
   font-family: Bungee;
-  color: #FFFFFF;
+  color: black;
   height: 120px;
   border-width: 100%;
-  background-color:black;
+  background-color:cadetblue;
   padding: 1.5em;
   justify-content: space-between;
   align-content: center;
@@ -17,7 +17,7 @@ nav .write-new-tweet {
 }
 
 nav .fa-angle-double-down {
-  color: red;
+  color:darksalmon;
 }
 
 .right-hand-nav {
