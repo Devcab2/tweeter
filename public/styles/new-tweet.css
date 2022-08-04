@@ -28,7 +28,7 @@ div {
   align-content: space-between;
 }
 
-.text {
+#tweet-string {
   align-items: center;
   width: 100%;
   border-bottom: 4px solid;
@@ -45,4 +45,8 @@ div {
 .button-container {
   display: flex;
   justify-content: space-between;
+}
+
+#counter {
+  font-family: Bungee;
 }
