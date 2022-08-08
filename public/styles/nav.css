@@ -10,7 +10,9 @@ nav {
   padding: 1.5em;
   justify-content: space-between;
   align-content: center;
-  
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 nav .write-new-tweet {
