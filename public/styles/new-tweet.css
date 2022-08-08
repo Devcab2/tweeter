@@ -1,12 +1,12 @@
 main {
-  display: flex;
   font-family: Source Sans Pro;
   background-color: #FFFFFF;
-  height: 200px;
+  height: 100%;
   border-width: 100%;
   padding: 1.5em;
   justify-content: space-between;
   align-content: center;
+  color: black;
   
 }
 
@@ -23,11 +23,6 @@ button {
   background-color:cadetblue;
 }
 
-div {
-  display: flex;
-  align-content: space-between;
-}
-
 #tweet-string {
   align-items: center;
   width: 100%;
@@ -36,10 +31,12 @@ div {
   border-left: 0px;
   border-right: 0px;
   height: 40px;
+  font-style: italic;
 }
 
 .new-tweet {
   width: 100%;
+  border-style:double;
 }
 
 .button-container {

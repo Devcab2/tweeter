@@ -1,0 +1,71 @@
+/* styles for posted tweets */
+
+.posted-tweet {
+  display: flex;
+  flex-direction: column;
+  border-color: black;
+  border-width: 5px;
+  width: 100%;
+  background-color: white;
+  padding: 1.5em;
+  margin-top: 1em;
+  border: 2px solid black;
+  background-color: cadetblue;
+  color: black;
+}
+
+.posted-tweet-head {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+  font-size: 25px;
+  padding-bottom: 40px;
+  font-family: Bungee;
+}
+
+.icon-name {
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.posted-tweet-body {
+  font-size: 20px;
+  border-bottom: 4px solid;
+  padding-bottom: 10px;
+  font-style: italic;
+  font-weight: 650;
+}
+
+.posted-tweet-footer {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+  font-size: small;
+  padding-top: 5px;
+  font-weight: 500;
+}
+
+/* hover states for posted tweeet */
+
+.post-date:hover {
+  color: white;
+}
+
+.fa-flag:hover {
+  color:white;
+}
+
+.fa-retweet:hover {
+  color:white;
+}
+
+.fa-heart:hover {
+  color:white;
+}
+
+.posted-tweet:hover {
+  box-shadow: 5px 10px black;
+}
+

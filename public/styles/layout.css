@@ -18,7 +18,7 @@ html {
 body {
   display: flex;
   font-family: Source Sans Pro;
-  color: #545149;
+  color: black;
   background-color: #f4f1ec;
   font-size: 24px;
   flex-direction: column;

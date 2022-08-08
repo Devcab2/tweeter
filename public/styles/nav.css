@@ -1,3 +1,5 @@
+/* nav bar styles */
+
 nav {
   display: flex;
   font-family: Bungee;
@@ -14,10 +16,12 @@ nav {
 nav .write-new-tweet {
   display: flex;;
   font-family: Source Sans Pro;
+  font-weight: 700;
 }
 
 nav .fa-angle-double-down {
-  color:darksalmon;
+  color:black;
+  
 }
 
 .right-hand-nav {

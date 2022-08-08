@@ -1,5 +1,5 @@
 header {
-  background-color: #00202b;
+  background-color: black;
   background-image: url("https://www.transparenttextures.com/patterns/psychedelic.png");
   display: flex;
   flex-direction: column;
@@ -15,5 +15,6 @@ header .avatar {
 }
 
 header .name {
-  color: linen;
+  color: white;
+  font-family: Bungee;
 }
