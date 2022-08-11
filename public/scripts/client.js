@@ -59,15 +59,21 @@ $(document).ready(function() {
   $("form").submit(function(event) {
     console.log("handler for .submit() was called");
     event.preventDefault();
+    const charsInTweet = $("#tweet-string").val().length;
+    console.log(charsInTweet);
+    if (charsInTweet > 140) {
+      alert("Tweet content exceeds max limit.");
+      return;
+    } else if (charsInTweet < 1) {
+      alert("Tweet is empty!");
+      return;
+    }
     $.ajax('/tweets', { method: 'POST', data: $("form").serialize() })
       .then(function() {
         console.log('Success: ');
-      });
+      }
+      );
     console.log($("form").serialize());
-  });
-
-  $(".tweet-button").click(function() {
-    $("#tweet-string").submit();
   });
 
   // use jquery to request to /tweets and recieve array of tweets as json
@@ -85,5 +91,4 @@ $(document).ready(function() {
 
   //load the data from the server
   loadTweets();
-
 });
