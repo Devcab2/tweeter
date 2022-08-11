@@ -38,7 +38,7 @@ $(document).ready(function() {
               <div class="text-body">${tweet.content.text}</div>
           </div>
           <footer class="posted-tweet-footer">
-          <span class="post-date">${tweet.created_at}</span>
+          <span class="post-date">${timeago.format(tweet.created_at)}</span>
              <div class="footer-icons">
               <span class="icons" href="#"><i class="fa fa-flag" aria-hidden="true"></i></span>
               <span class="icons" href="#"><i class="fa fa-retweet" aria-hidden="true"></i></span>
@@ -71,13 +71,6 @@ $(document).ready(function() {
   });
 
   // use jquery to request to /tweets and recieve array of tweets as json
-
-  // const loadTweets = function() {
-  //   $.get("/tweets", (data) => {
-  //     renderTweets(data());
-  //     console.log("Success: Tweets loaded");
-  //   });
-  // };
 
   const loadTweets = function() {
     $.ajax({
