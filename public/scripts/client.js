@@ -78,5 +78,20 @@ $(document).ready(function() {
   
   // display newly created tweets on our site when refreshred using our hardcoded data.
   renderTweets(data);
+ 
+  // jquery event handler for submit on our #tweet-string
+  $("form").submit(function(event) {
+    console.log("handler for .submit() was called");
+    event.preventDefault();
+    $.ajax('/tweets', { method: 'POST', data: $("form").serialize() })
+      .then(function(result) {
+        console.log('Success: ');
+      });
+    console.log($("form").serialize());
+  });
+
+  $(".tweet-button").click(function() {
+    $("#tweet-string").submit();
+  });
 
 });
