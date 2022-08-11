@@ -9,37 +9,11 @@
 // prepare document to be manipulated
 $(document).ready(function() {
 
-
-  // Fake data taken from initial-tweets.json
-  const data = [
-    {
-      "user": {
-        "name": "Newton",
-        "avatars": "https://i.imgur.com/73hZDYK.png"
-        ,
-        "handle": "@SirIsaac"
-      },
-      "content": {
-        "text": "If I have seen further it is by standing on the shoulders of giants"
-      },
-      "created_at": 1461116232227
-    },
-    {
-      "user": {
-        "name": "Descartes",
-        "avatars": "https://i.imgur.com/nlhLi3I.png",
-        "handle": "@rd" },
-      "content": {
-        "text": "Je pense , donc je suis"
-      },
-      "created_at": 1461113959088
-    }
-  ];
-
   // function to empty out targeted element and append our created tweet to the element.
   // loops through tweets
   // calls createTweetElement for each tweet
   // appends the tweets to the page
+
   const renderTweets = function(data) {
     const $tweets = $('.posted-tweet').empty();
     data.forEach(function(tweet) {
@@ -48,6 +22,7 @@ $(document).ready(function() {
   };
 
   // function to create html markup for tweets
+
   const createTweetElement = function(tweet) {
     const $tweet  = $(
       `<main
@@ -77,14 +52,15 @@ $(document).ready(function() {
   };
   
   // display newly created tweets on our site when refreshred using our hardcoded data.
-  renderTweets(data);
+  //renderTweets(data);
  
-  // jquery event handler for submit on our #tweet-string
+  // jquery event handler for submit on our #tweet-string + ajax post request to server
+
   $("form").submit(function(event) {
     console.log("handler for .submit() was called");
     event.preventDefault();
     $.ajax('/tweets', { method: 'POST', data: $("form").serialize() })
-      .then(function(result) {
+      .then(function() {
         console.log('Success: ');
       });
     console.log($("form").serialize());
@@ -93,5 +69,28 @@ $(document).ready(function() {
   $(".tweet-button").click(function() {
     $("#tweet-string").submit();
   });
+
+  // use jquery to request to /tweets and recieve array of tweets as json
+
+  // const loadTweets = function() {
+  //   $.get("/tweets", (data) => {
+  //     renderTweets(data());
+  //     console.log("Success: Tweets loaded");
+  //   });
+  // };
+
+  const loadTweets = function() {
+    $.ajax({
+      url: "http://localhost:8080/tweets",
+      type: "GET",
+      success: function(data) {
+        renderTweets(data);
+        console.log("Success: Tweets loaded", data);
+      }
+    });
+  };
+
+  //load the data from the server
+  loadTweets();
 
 });
