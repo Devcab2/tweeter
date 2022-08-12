@@ -17,7 +17,7 @@ $(document).ready(function() {
   const renderTweets = function(data) {
     const $tweets = $('.posted-tweet').empty();
     data.forEach(function(tweet) {
-      $tweets.append(createTweetElement(tweet));
+      $tweets.prepend(createTweetElement(tweet));
     });
   };
 
@@ -74,6 +74,7 @@ $(document).ready(function() {
       }
       );
     console.log($("form").serialize());
+    loadTweets();
   });
 
   // use jquery to request to /tweets and recieve array of tweets as json
