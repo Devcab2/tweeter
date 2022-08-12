@@ -47,3 +47,17 @@ button {
 #counter {
   font-family: Bungee;
 }
+
+.error-message {
+  text-align: center;
+  color: red;
+}
+
+.error {
+  border: 4px red;
+  border-style: solid;
+  width: 80%;
+  position: relative;
+  font-family: source sans pro, sans-serif;
+  margin: 20px auto;
+} 

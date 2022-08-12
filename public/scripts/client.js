@@ -62,27 +62,40 @@ $(document).ready(function() {
   //renderTweets(data);
  
   // jquery event handler for submit on our #tweet-string + ajax post request to server
-
+  $('.error').slideUp();
+  $('.error-message').text('');
+  
   $("form").submit(function(event) {
+
     console.log("handler for .submit() was called");
     event.preventDefault();
     const charsInTweet = $("#tweet-string").val().length;
     console.log(charsInTweet);
+
     if (charsInTweet > 140) {
-      alert("Tweet content exceeds max limit.");
+
+      $('.error').slideDown();
+      $('.error-message').text('🔴 Tweet text is longer than 140 characters! 🔴');
+      //alert("Tweet content exceeds max limit.");
       return;
+
     } else if (charsInTweet < 1) {
-      alert("Tweet is empty!");
+
+      $('.error').slideDown();
+      $('.error-message').text('🔴 Tweet text field is empty! 🔴');
+      //alert("Tweet is empty!");
       return;
+
     }
+
     $.ajax('/tweets', { method: 'POST', data: $("form").serialize() })
       .then(function() {
         console.log('Success: ');
-      }
-      );
+        loadTweets();
+        $("#tweet-string").val("");
+      });
+
     console.log($("form").serialize());
-    loadTweets();
-    $("#tweet-string").val("");
   });
 
   // use jquery to request to /tweets and recieve array of tweets as json
@@ -100,4 +113,5 @@ $(document).ready(function() {
 
   //load the data from the server
   loadTweets();
+
 });
