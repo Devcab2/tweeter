@@ -23,4 +23,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
+!["first load page"](https://github.com/Devcab2/tweeter/blob/master/docs/first-load-page.png?raw=true)
+
+![" posted tweet page"](https://github.com/Devcab2/tweeter/blob/master/docs/tweet-created.png?raw=true)
+
+![" mobile view page"](https://github.com/Devcab2/tweeter/blob/master/docs/mobile-view.png?raw=true)
 
