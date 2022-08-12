@@ -25,9 +25,9 @@ This project was created for education purposes by Chris Bowyer (LHL student)
 
 ## Screenshots
 
-!["first load page"](https://github.com/Devcab2/tweeter/blob/master/docs/first-load-page.png?raw=true)
+!["initial view page"](https://github.com/Devcab2/tweeter/blob/master/docs/initial-view.png?raw=true)
 
-![" posted tweet page"](https://github.com/Devcab2/tweeter/blob/master/docs/tweet-created.png?raw=true)
+![" posted tweet page"](\https://github.com/Devcab2/tweeter/blob/master/docs/after-post.png?raw=true)
 
 ![" mobile view page"](https://github.com/Devcab2/tweeter/blob/master/docs/mobile-view.png?raw=true)
 
