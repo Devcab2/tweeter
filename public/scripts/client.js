@@ -21,6 +21,13 @@ $(document).ready(function() {
     });
   };
 
+  // an escape function to prevent dangerous text being submitted in our text body, see .text-body
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
   // function to create html markup for tweets
 
   const createTweetElement = function(tweet) {
@@ -35,7 +42,7 @@ $(document).ready(function() {
           <span class="posted-tweet-handle">${tweet.user.handle}</span>
           </div>
              <div class="posted-tweet-body">
-              <div class="text-body">${tweet.content.text}</div>
+              <div class="text-body">${escape(tweet.content.text)}</div>
           </div>
           <footer class="posted-tweet-footer">
           <span class="post-date">${timeago.format(tweet.created_at)}</span>
@@ -75,6 +82,7 @@ $(document).ready(function() {
       );
     console.log($("form").serialize());
     loadTweets();
+    $("#tweet-string").val("");
   });
 
   // use jquery to request to /tweets and recieve array of tweets as json
