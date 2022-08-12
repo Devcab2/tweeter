@@ -58,7 +58,7 @@ $(document).ready(function() {
   };
   
   // jquery event handler for submit on our #tweet-string + ajax post request to server
-  $('.error').slideUp();
+  $('.error').hide();
   $('.error-message').text('');
   
   $("form").submit(function(event) {
