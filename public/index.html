@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <!-- Meta Information -->
   <title>Tweeter - Home Page</title>
@@ -53,38 +52,32 @@
   <!-- Font Awesome CDN -->     
  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
 
+ <!-- Responsive design -->
+ <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+
 </head>
 
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-
     <span>tweeter app</span>
-
     <div class="right-hand-nav">
       <span class="write-new-tweet"><b style="padding-right: 5px"> Write</b> a new tweet </span>
       <i class="fa fa-angle-double-down" aria-hidden="true"></i>
     </div>
-
   </nav>
-
   <!-- Header -->
+  <div class ="responsive-div">
   <header>
-
     <div>
       <img class="avatar" src="/images/profile-hex.png">
     </div>
-
-    <div>
+    <div class="name-plate">
       <h2 class="name">Chris Bowyer</h2>
     </div>
-
   </header>
-
   <!-- Page-specific (main) content here -->
-
   <main id="container">
-
     <section class="new-tweet">
       <div class="error">
         <p class="error-message"></p>
@@ -98,7 +91,6 @@
         </div>
       </form>
     </section>
-
     <!-- Posted Tweet -->
     <section class="posted-tweet">
       <div class="posted-tweet-head">
@@ -115,7 +107,6 @@
       <div class="posted-tweet-body">
         <div class="text-box">Don't forget: Commit and push your work to the Git repo!</div>
       </div>
-
       <footer class="posted-tweet-footer">
         <span class="post-date">10 days ago</span>
         <div class="footer-icons">
@@ -125,9 +116,7 @@
         </div>
       </footer>
     </section>
-
   </main>
-
+</div>
 </body>
-
 </html>

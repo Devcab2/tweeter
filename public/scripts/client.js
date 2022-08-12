@@ -7,13 +7,13 @@
 /* global document */
 
 // prepare document to be manipulated
+
 $(document).ready(function() {
 
   // function to empty out targeted element and append our created tweet to the element.
   // loops through tweets
   // calls createTweetElement for each tweet
   // appends the tweets to the page
-
   const renderTweets = function(data) {
     const $tweets = $('.posted-tweet').empty();
     data.forEach(function(tweet) {
@@ -29,7 +29,6 @@ $(document).ready(function() {
   };
 
   // function to create html markup for tweets
-
   const createTweetElement = function(tweet) {
     const $tweet  = $(
       `<main
@@ -58,9 +57,6 @@ $(document).ready(function() {
     return $tweet;
   };
   
-  // display newly created tweets on our site when refreshred using our hardcoded data.
-  //renderTweets(data);
- 
   // jquery event handler for submit on our #tweet-string + ajax post request to server
   $('.error').slideUp();
   $('.error-message').text('');
@@ -71,6 +67,7 @@ $(document).ready(function() {
     event.preventDefault();
     const charsInTweet = $("#tweet-string").val().length;
     console.log(charsInTweet);
+    $('.error').hide();
 
     if (charsInTweet > 140) {
 
@@ -87,7 +84,6 @@ $(document).ready(function() {
       return;
 
     }
-
     $.ajax('/tweets', { method: 'POST', data: $("form").serialize() })
       .then(function() {
         console.log('Success: ');
@@ -99,7 +95,6 @@ $(document).ready(function() {
   });
 
   // use jquery to request to /tweets and recieve array of tweets as json
-
   const loadTweets = function() {
     $.ajax({
       url: "http://localhost:8080/tweets",
@@ -110,8 +105,6 @@ $(document).ready(function() {
       }
     });
   };
-
   //load the data from the server
   loadTweets();
-
 });
